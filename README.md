@@ -53,7 +53,7 @@ Although this package has all known STM32Cube packages, support for the new seri
 
 ```
 >python stm32cube_package_creater.py --help
-usage: stm32cube_package_creater.py [-h] [-v] [-t] [-s]
+usage: stm32cube_package_creater.py [-h] [-v] [-t] [-s] [--show-versions]
 
 Helper program to download the latest version of STM32Cube packages and auto-
 package them as a PlatformIO package.
@@ -64,6 +64,7 @@ optional arguments:
   -t, --create-tarball  Automatically use 'pio package' to create the complete
                         .tar.gz package
   -s, --skip-update     Do not update repositories, just create new package.
+  --show-versions       Only show versions of downloaded pacakges.
 ```
 
 Execution of `python stm32cube_package_creater.py -t` should createa a `created_package` folder in the scripts directory in which the package will be created. Then, a tarball should be created.
