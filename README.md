@@ -4,6 +4,29 @@
 
 This tool is intended for the automatic creation of a `framework-stm32cube` package, which includes all the latest versions of the sub-packages from ST Microelectronics. 
 
+## Version overview 
+
+Comparison regarding package versions included in PIO's current `framework-stm32cube` and this ones. PIO's versions are mostly around 2 years old and several versions behind.
+
+|Series| PIO version | This version |
+|------|:-------------:|---------------|
+| F0 	 | 1.9.0       | 1.11.1        | 	
+| F1 	 | 1.7.0       | 1.8.2         |	
+| F2 	 | 1.7.0       | 1.9.1         |	
+| F3 	 | 1.10.0      | 1.11.1        | 	
+| F4 	 | 1.23.0      | 1.25.1        | 	
+| F7 	 | 1.14.0      | 1.16.0        | 	
+| H7 	 | 1.3.0       | 1.8.0         |	
+| G0 	 | ❌ not included | 1.3.0-1 | 	
+| G4 	 | ❌ not included | 1.3.0 | 	
+| L0 	 | 1.11.0      | 1.11.3        | 	
+| L1 	 | 1.8.1       | 1.10.1        | 	
+| L4 	 | 1.13.0      | 1.16.0        | 	
+| L5 	 | ❌ not included | 1.3.1 | 	
+| MP1  | ❌ not included | 1.2.0-2 | 	
+| WB  | ❌ not included | 1.9.0 | 	
+
+
 ## Inner workings
 
 The script roughly does the following
