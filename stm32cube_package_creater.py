@@ -224,8 +224,12 @@ if __name__ == "__main__":
                     action="store_true")
     parser.add_argument("-s", "--skip-update", help="Do not update repositories, just create new package.",
                     action="store_true")
+    parser.add_argument("--show-versions", help="Only show versions of downloaded pacakges.", action="store_true")
     args = parser.parse_args()
     verbose = args.verbose
     do_create_tarball = args.create_tarball
     skip = args.skip_update
+    if args.show_versions: 
+        print_summary()
+        exit(0)
     main_func(verbose, do_create_tarball, skip)
