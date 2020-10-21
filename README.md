@@ -79,3 +79,11 @@ platform_packages =
 ```
 
 to the `platformio.ini` of the project.
+
+# Open ToDos
+
+* verify that examples are still compilable, or update them if APIs have changed
+* For `platform-ststm32`: Allow projects to specify their own hal config file
+    * see proposed changes in https://github.com/dingyifei/platform-ststm32
+* add some examples for devices from new series (L5, G0, G4, WB, MP1, ..)
+   * needs linker scripts
