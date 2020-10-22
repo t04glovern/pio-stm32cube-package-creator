@@ -30,7 +30,7 @@ Comparison regarding package versions included in PIO's current `framework-stm32
 ## Inner workings
 
 The script roughly does the following
-1. `git clone` a list of 14 `STM32Cube*` respositories from STM 
+1. `git clone` a list of 15 `STM32Cube*` respositories from STM 
 2. Copy the needed folders and files into a new package folder 
 3. Remove some files to decrease download size 
 4. Apply some quirks (see below)
@@ -97,6 +97,16 @@ framework = stm32cube
 board = nucleo_f072rb
 build_flags = -DF0
 ```
+
+If you want to use a locally created version of the framework package, use the `file://` pseudo-protocol to give it the path to the `.tar.gz`. Example 
+
+```
+[env]
+platform_packages =
+   framework-stm32cube@file://D:\pio-stm32cube-package-creator\framework-stm32cube-2.0.201021.tar.gz
+```
+
+Then there's no need to upload and redownload the local package.
 
 # Open ToDos
 
