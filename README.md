@@ -4,6 +4,16 @@
 
 This tool is intended for the automatic creation of a `framework-stm32cube` package, which includes all the latest versions of the sub-packages from ST Microelectronics. 
 
+## **!!UPDATE!!** 
+
+Uplaoding the 400MB `framework-stm32cube` cube file to this Git repo with Large-File-Storage (LFS) was a pretty bad idea because my entire quote of only 1GB bandwidth and storage was exceeded instantly. (Every download causes a bandwidth usage of 400MB. 
+
+The file was moved to Google Drive, that does not have such restrictions: 
+
+https://drive.google.com/file/d/1306PQZXcKkuDVKcFetv0D9rsbZuIaDDV/view?usp=sharing 
+
+(Or direct link: https://drive.google.com/uc?export=download&id=1306PQZXcKkuDVKcFetv0D9rsbZuIaDDV)
+
 ## Version overview 
 
 Comparison regarding package versions included in PIO's current `framework-stm32cube` and this ones. PIO's versions are mostly around 2 years old and several versions behind.
@@ -75,7 +85,7 @@ As long as this package is not yet merged, the cleanest way to use it is to manu
 
 ```
 platform_packages = 
-    framework-stm32cube@https://github.com/maxgerhardt/pio-stm32cube-package-creator/raw/master/framework-stm32cube-2.0.201021.tar.gz
+    framework-stm32cube@https://drive.google.com/uc?export=download&id=1306PQZXcKkuDVKcFetv0D9rsbZuIaDDV
 ```
 
 to the `platformio.ini` of the project.
@@ -88,7 +98,7 @@ Use https://github.com/platformio/platform-ststm32/tree/develop/examples/stm32cu
 ; global overrides
 [env]
 platform_packages = 
-    framework-stm32cube@https://github.com/maxgerhardt/pio-stm32cube-package-creator/raw/master/framework-stm32cube-2.0.201021.tar.gz
+    framework-stm32cube@https://drive.google.com/uc?export=download&id=1306PQZXcKkuDVKcFetv0D9rsbZuIaDDV
 
 ; compile for STM32F072RB
 [env:nucleo_f072rb]
