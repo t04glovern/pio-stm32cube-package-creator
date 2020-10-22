@@ -75,10 +75,28 @@ As long as this package is not yet merged, the cleanest way to use it is to manu
 
 ```
 platform_packages = 
-    framework-stm32cube@https://raw.githubusercontent.com/maxgerhardt/pio-stm32cube-package-creator/master/framework-stm32cube-2.0.201021.tar.gz
+    framework-stm32cube@https://github.com/maxgerhardt/pio-stm32cube-package-creator/raw/master/framework-stm32cube-2.0.201021.tar.gz
 ```
 
 to the `platformio.ini` of the project.
+
+## Example project 
+
+Use https://github.com/platformio/platform-ststm32/tree/develop/examples/stm32cube-hal-blink but override the `platformio.ini` with e.g. 
+
+```
+; global overrides
+[env]
+platform_packages = 
+    framework-stm32cube@https://github.com/maxgerhardt/pio-stm32cube-package-creator/raw/master/framework-stm32cube-2.0.201021.tar.gz
+
+; compile for STM32F072RB
+[env:nucleo_f072rb]
+platform = ststm32
+framework = stm32cube
+board = nucleo_f072rb
+build_flags = -DF0
+```
 
 # Open ToDos
 
