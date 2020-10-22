@@ -12,7 +12,6 @@ The file was moved to Google Drive, that does not have such restrictions:
 
 https://drive.google.com/file/d/1306PQZXcKkuDVKcFetv0D9rsbZuIaDDV/view?usp=sharing 
 
-(Or direct link: https://drive.google.com/uc?export=download&id=1306PQZXcKkuDVKcFetv0D9rsbZuIaDDV)
 
 ## Version overview 
 
@@ -81,14 +80,19 @@ Execution of `python stm32cube_package_creater.py -t` should createa a `created_
 
 ## Usage of generated package 
 
-As long as this package is not yet merged, the cleanest way to use it is to manually override the `framework-stm32cube` in the project. This can be done using [`platform_packages`](https://docs.platformio.org/en/latest/projectconf/section_env_platform.html#platform-packages) and a download link to the created package. E.g., to use the reference package uploaded in this repo, add 
+As long as this package is not yet merged, the cleanest way to use it is to manually override the `framework-stm32cube` in the project. This can be done using [`platform_packages`](https://docs.platformio.org/en/latest/projectconf/section_env_platform.html#platform-packages) and a link to the created package. 
+
+Since the package was removed from this repo (see update section), you **have to download the `tar.gz` package yourself to some path on your harddrive. The `file://` pseudo-protocol can then be used to as "download link". For example, if you downloaded it to `D:\pio-stm32cube-package-creator\framework-stm32cube-2.0.201021.tar.gz`, add 
+ 
 
 ```
 platform_packages = 
-    framework-stm32cube@https://drive.google.com/uc?export=download&id=1306PQZXcKkuDVKcFetv0D9rsbZuIaDDV
+    framework-stm32cube@file://D:\pio-stm32cube-package-creator\framework-stm32cube-2.0.201021.tar.gz
 ```
 
 to the `platformio.ini` of the project.
+
+If you use Linux or Mac, the path will simply be different, e.g. `file:///User/myuser/Downloads/framework-stm32cube-2.0.201021.tar.gz`. (tripple `/` because of `file://` plus path `/User/...`).
 
 ## Example project 
 
@@ -98,7 +102,7 @@ Use https://github.com/platformio/platform-ststm32/tree/develop/examples/stm32cu
 ; global overrides
 [env]
 platform_packages = 
-    framework-stm32cube@https://drive.google.com/uc?export=download&id=1306PQZXcKkuDVKcFetv0D9rsbZuIaDDV
+    framework-stm32cube@file://D:\pio-stm32cube-package-creator\framework-stm32cube-2.0.201021.tar.gz
 
 ; compile for STM32F072RB
 [env:nucleo_f072rb]
@@ -108,15 +112,8 @@ board = nucleo_f072rb
 build_flags = -DF0
 ```
 
-If you want to use a locally created version of the framework package, use the `file://` pseudo-protocol to give it the path to the `.tar.gz`. Example 
+While adapting the path above.
 
-```
-[env]
-platform_packages =
-   framework-stm32cube@file://D:\pio-stm32cube-package-creator\framework-stm32cube-2.0.201021.tar.gz
-```
-
-Then there's no need to upload and redownload the local package.
 
 # Open ToDos
 
