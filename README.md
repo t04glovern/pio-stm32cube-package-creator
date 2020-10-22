@@ -82,7 +82,7 @@ Execution of `python stm32cube_package_creater.py -t` should createa a `created_
 
 As long as this package is not yet merged, the cleanest way to use it is to manually override the `framework-stm32cube` in the project. This can be done using [`platform_packages`](https://docs.platformio.org/en/latest/projectconf/section_env_platform.html#platform-packages) and a link to the created package. 
 
-Since the package was removed from this repo (see update section), you **have to download the `tar.gz` package yourself to some path on your harddrive. The `file://` pseudo-protocol can then be used to as "download link". For example, if you downloaded it to `D:\pio-stm32cube-package-creator\framework-stm32cube-2.0.201021.tar.gz`, add 
+Since the package was removed from this repo (see update section), you **have to download the `tar.gz` package yourself** to some path on your harddrive (or alternatively, re-generate the file using the script itself). The `file://` pseudo-protocol can then be used to as "download link". For example, if you downloaded it to `D:\pio-stm32cube-package-creator\framework-stm32cube-2.0.201021.tar.gz`, add 
  
 
 ```
