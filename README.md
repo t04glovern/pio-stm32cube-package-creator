@@ -6,7 +6,7 @@ This tool is intended for the automatic creation of a `framework-stm32cube` pack
 
 ## **!!UPDATE!!** 
 
-Uplaoding the 400MB `framework-stm32cube` cube file to this Git repo with Large-File-Storage (LFS) was a pretty bad idea because my entire quote of only 1GB bandwidth and storage was exceeded instantly. (Every download causes a bandwidth usage of 400MB. 
+Uplaoding the 400MB `framework-stm32cube` cube file to this Git repo with Large-File-Storage (LFS) was a pretty bad idea because my entire quote of only 1GB bandwidth and storage was exceeded instantly. (Every download causes a bandwidth usage of 400MB). 
 
 The file was moved to Google Drive, that does not have such restrictions: 
 
