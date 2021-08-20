@@ -37,7 +37,7 @@ def run_command(args, cwd=None):
     if cwd is None: 
         cwd = get_script_directory()
     print("[+] Executing %s in path %s" % (' '.join(args), cwd))
-    returncode = subprocess.call(args, shell=True, cwd=cwd)
+    returncode = subprocess.call(args, shell=False, cwd=cwd)
     if returncode != 0:
         print("Command failed with exit code %d. Check output." % returncode)
         return False
